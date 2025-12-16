@@ -2,8 +2,10 @@
 # Smart Student Timesheet
 
 ## Overview
+
 Smart Student Timesheet is a simple Angular application that displays a student’s class schedule based on their ID and name.  
 The application highlights the currently running class or the next upcoming class based on the current date and time.
+
 ---
 
 ## Architecture
@@ -39,5 +41,5 @@ ng serve
 ```
 ---
 
-## postman 
+## Postman 
 import the collection from Mockapi-postman folder 
