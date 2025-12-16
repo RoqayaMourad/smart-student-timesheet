@@ -26,13 +26,13 @@ export class MockStudentApiService implements StudentDataStrategy {
     classes: [
       {
         subject: 'Mathematics',
-        day: 'wednesday',
+        day: 'Wednesday',
         startTime: '00:15',
         endTime: '02:00'
       },
       {
         subject: 'Physics',
-        day: 'wednesday',
+        day: 'Wednesday',
         startTime: '08:45',
         endTime: '10:30'
       }
