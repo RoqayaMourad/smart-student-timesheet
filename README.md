@@ -1,27 +1,43 @@
-# SmartStudentTimesheet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+# Smart Student Timesheet
 
-## Development server
+## Overview
+Smart Student Timesheet is a simple Angular application that displays a student’s class schedule based on their ID and name.  
+The application highlights the currently running class or the next upcoming class based on the current date and time.
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Architecture
+### 1. Components
+- Responsible only for UI and user interaction
+- No HTTP calls inside components
 
-## Code scaffolding
+### 2. Facade Layer
+- Acts as a bridge between components and the data layer
+- Coordinates business logic
+- Keeps components simple and decoupled
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 3. Data Layer
+- Uses **Strategy Pattern**
+- Current implementation uses a mock data strategy
+- Can be easily replaced with a real API implementation
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Mock API (Postman)
+A mock API contract is created using Postman to define:
+- POST request
+- Request body (student ID and name)
+- Headers (sessionID)
+- Response structure
+---
 
-## Running unit tests
+## How to Run the Project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+ng serve
+```
+---
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## postman 
+import the collection from Mockapi-postman folder 

@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Student Timesheet</h2>
+
+  <input
+    type="text"
+    placeholder="Enter Student ID"
+    [(ngModel)]="studentId"
+  />
+
+  <input
+  type="text"
+  placeholder="Enter Student Name"
+  [(ngModel)]="studentName"
+/>
+
+
+  <button (click)="loadTimesheet()">
+    Load Timesheet
+  </button>
+
+  <table *ngIf="studentData">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Day</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let c of studentData.classes"
+    [class.current]="c.subject === currentClass?.subject"
+    [class.next]="c.subject === nextClass?.subject">
+  <td>{{ c.subject }}</td>
+  <td>{{ c.day }}</td>
+  <td>{{ c.startTime }} - {{ c.endTime }}</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>

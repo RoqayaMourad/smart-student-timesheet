@@ -1,0 +1,38 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  padding: 8px;
+  width: 60%;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.current {
+  background-color: #bbe2ca;
+  font-weight: bold;
+}
+
+.next {
+  background-color: #ffcdcd;
+}
+
