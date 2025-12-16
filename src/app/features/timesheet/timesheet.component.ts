@@ -23,7 +23,7 @@ loadTimesheet(): void {
   this.studentFacade
     .loadStudentTimesheet(this.studentId, this.studentName)
     .subscribe(response => {
-      if (!response.found) {
+      if (!response) {
         this.studentData = undefined as any;
         this.currentClass = null;
         this.nextClass = null;
@@ -36,10 +36,7 @@ loadTimesheet(): void {
     });
 }
 
-
-
-
-  private detectCurrentAndNextClass(): void {
+private detectCurrentAndNextClass(): void {
     const now = new Date();
     const currentDay = now.toLocaleString('en-US', { weekday: 'long' });
     const currentMinutes = now.getHours() * 60 + now.getMinutes();
@@ -68,6 +65,8 @@ loadTimesheet(): void {
       }
     }
   }
+
+
 
   private toMinutes(time: string): number {
     const [hours, minutes] = time.split(':').map(Number);
